@@ -1,0 +1,11 @@
+# iDTC database configuration
+# type: FLATFILE or SQLITE
+
+database:
+  type: FLATFILE
+  sqlite:
+    file: dtc.db
+
+flatfile:
+  folder: data
+  file: stats.yml

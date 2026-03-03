@@ -1,0 +1,53 @@
+﻿# iDTC configuration
+# Plugin: Destroy the Core Event
+
+settings:
+  # es_ES -> messages/message_es.yml
+  # en_US -> messages/message_en.yml
+  locale: es_ES
+  debug: false
+
+core:
+  current-name: default
+  world: world
+  region-id: ""
+  use-region-check: false
+  active-block: RAW_GOLD_BLOCK
+  inactive-block: BEDROCK
+  block-to-break: RAW_GOLD_BLOCK
+  max-health: 200.0
+  break-amount: 1.0
+  allow-break-outside-region: false
+
+broadcasts:
+  enabled: true
+  interval-seconds: 30
+  health-remaining-enabled: true
+  health-remaining-thresholds: [75, 50, 25, 10]
+
+event:
+  auto-stop-minutes: 30
+  allow-start-while-running: false
+  auto-start:
+    enabled: true
+    interval-hours: 5
+    align-to-clock-hour: true
+    minute: 0
+  top-size: 3
+  announce-top: true
+
+rewards:
+  enabled: true
+  # Rewards mode/commands/items are now stored per DTC profile:
+  # plugins/iDTC/dtcs/dtc_{name}/dtc_{name}.yml
+  # plugins/iDTC/dtcs/dtc_{name}/items/reward_items.yml
+  top-1:
+    - "crate key give %winner_1% epic 3"
+  top-2:
+    - "crate key give %winner_2% epic 1"
+  top-3:
+    - "crate key give %winner_3% epic 1"
+
+placeholders:
+  enabled: true
+  next-start-while-running: "EN CURSO"
